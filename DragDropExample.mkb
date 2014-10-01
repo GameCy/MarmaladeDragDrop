@@ -1,0 +1,29 @@
+#!/usr/bin/env mkb
+files
+{
+    DragDrop.cpp
+	DragDrop.h
+    DragDropExample.cpp
+	main.cpp
+    PointerProxy.cpp
+	PointerProxy.h
+}
+
+subprojects
+{
+    iwutil
+    iwgx
+	iw2d
+}
+
+assets
+{
+    (data)
+    blob.png
+	target.png
+
+}
+
+deployment
+{
+}
