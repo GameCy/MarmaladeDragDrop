@@ -25,10 +25,15 @@ The included classes are:
   3. Create a DragDropManager instance, and in your main loop call its event handlers on mouse events:
 
     gDragDropManager = new DragDropManager
+    
     ...
+    
     MainLoop:
+    
     if (MouseButtonDown) gDragDropManager->BeginDragging(MouseEventInfo( .. x,y,.....));
+    
     if (MouseButtonMove) gDragDropManager->UpdateDragging(MouseEventInfo( ........));
+    
     if (MouseButtonUp)   gDragDropManager->EndDragging(MouseEventInfo( .. x,y,.....));
 
   4. Create your DropTarget objects and add them to a DropTargetList:
