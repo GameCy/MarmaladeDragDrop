@@ -28,16 +28,18 @@ The included classes are:
       if (MouseButtonMove) gDragDropManager->UpdateDragging(MouseEventInfo( ........))
       if (MouseButtonUp)   gDragDropManager->EndDragging(MouseEventInfo( .. x,y,.....))
 
-  4. Create your DropTarget objects and add them to a DropTargetList 
-  DropTargetList* targets = new DropTargetList;
+  4. Create your DropTarget objects and add them to a DropTargetList:
+ 
+	DropTargetList* targets = new DropTargetList;
 	t1 = new Basket(...);
 	t2 = new Basket(...);
 	targets->Add( t1);
 	targets->Add( t2);
 
   5. Create some Dragable objects, let them know which targets they can drop onto, and add them to the DragDropManager:
-  gem1 = new Gem( targets, pos, image, etc...);
-  gem2 = new Gem( targets, pos, image, etc...);
+
+	gem1 = new Gem( targets, pos, image, etc...);
+	gem2 = new Gem( targets, pos, image, etc...);
 	gDragDropManager->Draggables.push_back( gem1 );
 	gDragDropManager->Draggables.push_back( gem2);
 
