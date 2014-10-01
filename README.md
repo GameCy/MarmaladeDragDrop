@@ -15,9 +15,11 @@ The included classes are:
  
  How it works:
   1. Derive the object you want to drag from Dragable:
+  
       class Gem : public Dragable {}
 
   2. The object that accepts dropped objects should be derived from the DropTarget class:
+
       class Basket : public DropTarget {}
 
   3. Create a DragDropManager instance, and in your main loop call its event handlers on mouse events:
